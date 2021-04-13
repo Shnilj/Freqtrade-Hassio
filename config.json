@@ -1,0 +1,46 @@
+{
+  "name": "Freqtrade",
+  "version": "0.2",
+  "slug": "freqtrade",
+  "webui": "[PROTO:ssl]://[HOST]:[PORT:1338]/",
+  "ingress": true,
+  "description": "My first real add-on!",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "auto",
+  "legacy": true,
+  "ports": {
+    "1338/tcp": 1338
+  },
+  "ports_description": {
+    "1338/tcp": "Web interface"
+  },
+  "privileged": [
+    "SYS_ADMIN"
+  ],
+  "full_access": true,
+  "map": [
+    "config:rw",
+    "share:rw",
+    "addons:rw"
+  ],
+  "init": false,
+  "hassio_api": true,
+  "hassio_role": "manager",
+  "homeassistant_api": true,
+  "host_network": true,
+  "auth_api": true,
+  "apparmor": false,
+  "options": {
+    "ssl": false,
+    "username": "freqtrader",
+    "password": "SuperSecurePassword",
+    "timeframe": "5m"
+  },
+  "schema": {
+    "ssl": "bool",
+    "username": "str",
+    "password": "str",
+    "timeframe": "str"
+  }
+}
