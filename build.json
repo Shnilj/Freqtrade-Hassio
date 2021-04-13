@@ -1,0 +1,9 @@
+{
+    "build_from": {
+      "armhf": "freqtradeorg/freqtrade:stable_pi",
+      "aarch64": "freqtradeorg/freqtrade:stable_pi"
+    },
+    "squash": false,
+    "args": {
+    }
+  }
